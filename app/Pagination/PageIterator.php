@@ -48,7 +48,7 @@ class PageIterator implements Iterator
      */
     public function hasPrevious()
     {
-    	return $this->current() === $this->meta->page;
+    	
     }
 
     /**

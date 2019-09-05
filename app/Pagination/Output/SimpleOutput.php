@@ -17,16 +17,17 @@ class SimpleOutput extends OutPutAbstract
 
     	$html = "<ul>";
 
+    	if ($iterator->hasPrevious()) {
+    		
+    	}
+
     	foreach ($iterator as $page) {
 
     		if ($iterator->isCurrentPage()) {
-    			$html .= "<li class=\"is__current\"> <a href=\"{$this->query($page)}\">$page </a> </li>";
-    			
+    			$html .= "<li class=\"is__current\"><a href=\"{$this->query($page)}\">$page</a> </li>";		
     		}else {
-    			$html .= "<li> <a href=\"{$this->query($page)}\">$page</a> </li>";
-    		}
-
-    		
+    			$html .= "<li><a href=\"{$this->query($page)}\">$page</a></li>";
+    		}  		
     	}
 
     	$html .= "</ul>";
