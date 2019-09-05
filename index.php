@@ -24,6 +24,6 @@ $queryBuilder->select('*')->from('users');
 
 $builder = new Builder($queryBuilder);
 
-$users = $builder->paginate($_GET['page'] ?? 1, 7);
+$users = $builder->paginate($_GET['page'] ?? 1, 10);
 
 dump($users->render());

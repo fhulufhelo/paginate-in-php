@@ -3,7 +3,7 @@
 namespace App\Pagination;
 
 use App\Pagination\Meta;
-use App\Pagination\Output\SimpleOut;
+use App\Pagination\Output\SimpleOutput;
 
 /**
  * summary
@@ -41,7 +41,7 @@ class Result
      */
     public function render()
     {
-        return (new SimpleOut($this->meta))->render();
+        return (new SimpleOutput($this->meta))->render();
 
     }
 }

@@ -7,7 +7,7 @@ use App\Pagination\Meta;
 /**
  * summary
  */
-class SimpleOut
+abstract class OutPutAbstract
 {
 	/**
      * summary
@@ -24,13 +24,15 @@ class SimpleOut
     /**
      * summary
      */
-    public function render()
+    public function page()
     {
     	$lrCount = 2;
 
+    	$endDifference = max(1, $this->meta->page - ($this->meta->lastPage - $lrCount) + 1);
+
     	$range = range(1, $this->meta->lastPage);
 
-    	$offsetStart = max(1, ($this->meta->page) - $lrCount);
+    	$offsetStart = max(1, ($this->meta->page) - $lrCount) - $endDifference;
 
     	$range = array_slice($range, $offsetStart, $this->meta->perPage);
 
@@ -40,6 +42,11 @@ class SimpleOut
 
     	$range[] = $this->meta->lastPage;
 
-    	return $range;
+    	return array_unique($range);
     }
+
+    /**
+     * summary
+     */
+    abstract public function render();
 }
