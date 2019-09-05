@@ -34,10 +34,10 @@ class Builder
     	$total =  $this->totalRows();
 
     	$result = $this->builder
-    				->setFirstResult($this->getFirstResultIndex($page,$perpage))
-    				->setMaxResults($perpage)
-    				->execute()
-    				->fetchAll();
+    		->setFirstResult($this->getFirstResultIndex($page,$perpage))
+    		->setMaxResults($perpage)
+    		->execute()
+    		->fetchAll();
 
     	return new Result($result, new Meta($page, $perpage, $total));	
 
