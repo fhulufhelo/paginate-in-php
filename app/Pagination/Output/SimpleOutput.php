@@ -17,9 +17,11 @@ class SimpleOutput extends OutPutAbstract
 
     	$html = "<ul>";
 
+
     	if ($iterator->hasPrevious()) {
-    		
+    		// to be implemented
     	}
+
 
     	foreach ($iterator as $page) {
 
@@ -31,6 +33,10 @@ class SimpleOutput extends OutPutAbstract
     	}
 
     	$html .= "</ul>";
+
+    	if ($iterator->hasNext()) {
+    		// to be implemented
+    	}
 
     	return $html;
     }
