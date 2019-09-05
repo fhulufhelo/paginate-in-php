@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Pagination;
+namespace Fhulu\Pagination;
 
-use App\Pagination\Meta;
-use App\Pagination\Result;
+use Fhulu\Pagination\Meta;
+use Fhulu\Pagination\Result;
 
 
 /**

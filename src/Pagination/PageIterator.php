@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Pagination;
+namespace Fhulu\Pagination;
 
-use App\Pagination\Meta;
+use Fhulu\Pagination\Meta;
 use Iterator;
 
 

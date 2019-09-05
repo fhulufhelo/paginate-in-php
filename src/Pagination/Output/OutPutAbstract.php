@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Pagination\Output;
+namespace Fhulu\Pagination\Output;
 
-use App\Pagination\Meta;
-use App\Pagination\PageIterator;
+use Fhulu\Pagination\Meta;
+use Fhulu\Pagination\PageIterator;
 
 /**
  * summary

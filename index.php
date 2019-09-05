@@ -1,6 +1,6 @@
 <?php
 
-use App\Pagination\Builder;
+use Fhulu\Pagination\Builder;
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;
 
