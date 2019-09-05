@@ -3,6 +3,7 @@
 namespace App\Pagination\Output;
 
 use App\Pagination\Meta;
+use App\Pagination\PageIterator;
 
 /**
  * summary
@@ -42,7 +43,7 @@ abstract class OutPutAbstract
 
     	$range[] = $this->meta->lastPage;
 
-    	return array_unique($range);
+    	return new PageIterator(array_unique($range), $this->meta);
     }
 
     /**
